@@ -5,7 +5,7 @@ export default function DashboardLayout({
 }) {
   return (
     <section>
-      <nav>Dashboard Nav</nav>
+      <nav>Nav</nav>
       {children}
     </section>
   );

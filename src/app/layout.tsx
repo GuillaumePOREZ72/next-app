@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarTrigger,
+} from "@/components/ui/menubar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +36,41 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Menubar>
+          <MenubarMenu>
+            <MenubarTrigger>Marketing</MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>
+                <Link href="/about">About</Link>
+              </MenubarItem>
+              <MenubarItem>
+                <Link href="/contact">Contact</Link>
+              </MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>Blog</MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>
+                <Link href="/blog">List</Link>
+              </MenubarItem>
+              <MenubarItem>
+                <Link href="/blog/topic-name">Topic</Link>
+              </MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger>Dashboard</MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>
+                <Link href="/dashboard/settings">Settings</Link>
+              </MenubarItem>
+              <MenubarItem>
+                <Link href="/dashboard/profile">Profile</Link>
+              </MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+        </Menubar>
         {children}
       </body>
     </html>
