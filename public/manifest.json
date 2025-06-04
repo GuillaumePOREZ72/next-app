@@ -1,0 +1,16 @@
+{
+  "name": "Mon Application Next.js",
+  "short_name": "MonApp",
+  "description": "Une application Next.js moderne avec blog, dashboard et pages marketing",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
